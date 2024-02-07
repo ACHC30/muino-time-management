@@ -24,10 +24,6 @@ jobs:
       - name: Remove node_modules directory
         run: rm -rf node_modules
 
-      - name: Install npm dependencies
-        working-directory: muino-angular
-        run: npm install
-
       - name: npm install, build, and test
         working-directory: muino-angular
         run: |
