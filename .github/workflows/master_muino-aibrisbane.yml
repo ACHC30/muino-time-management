@@ -29,6 +29,7 @@ jobs:
         run: npm install
 
       - name: Check for npm audit issues
+        working-directory: muino-angular
         run: npm audit
 
       - name: npm install, build, and test
