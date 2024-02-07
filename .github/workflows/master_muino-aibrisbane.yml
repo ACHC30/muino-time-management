@@ -1,6 +1,3 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
 name: Build and deploy Node.js app to Azure Web App - Muino-aibrisbane
 
 on:
@@ -22,6 +19,7 @@ jobs:
           node-version: '20.x'
 
       - name: npm install, build, and test
+        working-directory: muino-time-management/muino-angular
         run: |
           npm install
           npm run build --if-present
@@ -68,4 +66,3 @@ jobs:
           app-name: 'Muino-aibrisbane'
           slot-name: 'Production'
           package: .
-          
